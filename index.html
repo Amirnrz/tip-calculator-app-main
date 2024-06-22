@@ -5,9 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Tip calculator app</title>
 </head>
 <body>
+
+  <!-- container -->
+   <main class="container">
+      <h2 class="title">SPLI <br> TTER</h2>
+      <section class="tip-calculator">
+        <!-- bill and tip, people count -->
+        <div  class="tip-form">
+          <div class="tip-form__bill">
+            <label for="bill">Bill</label>
+            <input type="number" class="big-input bill">
+            <img class="icon" src="./images/icon-dollar.svg" alt="">
+          </div>
+          <div class="tip-form__select-tip">
+            <label for="select tip">Select Tip %</label>
+            <div class="tip-options">
+              <div class="tip-option">
+                <input name="tip-perecent" value="5%" type="radio">
+                <h3 class="tip-number">5%</h3>
+              </div>
+              <div class="tip-option">
+                <input name="tip-perecent" value="10%" type="radio">
+                <h3 class="tip-number">10%</h3>
+              </div>
+              <div class="tip-option">
+                <input name="tip-perecent" value="10%" type="radio">
+                <h3 class="tip-number">15%</h3>
+              </div>
+              <div class="tip-option">
+                <input name="tip-perecent" value="10%" type="radio">
+                <h3 class="tip-number">25%</h3>
+              </div>
+              <div class="tip-option">
+                <input name="tip-perecent" value="10%" type="radio">
+                <h3 class="tip-number">50%</h3>
+              </div>
+              <div class="tip-option custom">
+                <input placeholder="Custom" name="tip-perecent" class="custom-input" type="number" min="0">
+              </div>
+            </div>
+          </div>
+          <div class="people-number">
+            <label for="people">Number of People</label>
+            <input min="0" class="big-input" type="number">
+            <img class="icon" src="./images/icon-person.svg" alt="">
+          </div>
+        </div>
+        <!-- result & reset -->
+        <div class="tip-result">
+          <div class="wrapper tip-amount">
+            <div>
+              <h5>Tip Amount</h5>
+              <p>/ person</p>
+            </div>
+            <h2>$4.27</h2>
+          </div>
+          <div class="wrapper tip-total">
+            <div>
+              <h5>Tota</h5>
+              <p>/ person</p>
+            </div>
+            <h2>$32.79</h2>
+          </div>
+          <button class="btn reset-btn">Reset</button>
+        </div>
+      </section>
+   </main>
+
 </body>
 </html>

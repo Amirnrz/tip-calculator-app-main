@@ -25,6 +25,175 @@
   --font: "Space Mono", monospace;
 }
 
+input, button {
+  border: none;
+  outline: none;
+}
+
+label {
+  color: var(--Dark-grayish-cyan);
+}
+
 body {
-  font-family: var(--font)
+  font-family: var(--font);
+  background-color: var(--Light-grayish-cyan);
+}
+
+.container {
+  width: 100vw;
+  max-width: 100%;
+  display: grid;
+  place-items: center;
+  margin: 4rem auto;
+  overflow-x: hidden;
+}
+
+.title {
+  color: var(--Very-dark-cyan);
+  letter-spacing: 10px;
+}
+
+/* all the tip calulator stuff goes from here */
+.tip-calculator {
+  width: 100%;
+  max-width: 800px;
+  background-color: var(--White);
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.tip-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tip-form__bill,.people-number {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.tip-form input[type="text"], .tip-form input[type="number"]:not(.custom-input){
+  padding: 0.5rem;
+  padding-inline: 1rem;
+  border-radius: 5px;
+  background: var(--Very-light-grayish-cyan);
+  margin-top: 0.5rem;
+  box-shadow: 0 0 0 var(--Strong-cyan);
+  transition: box-shadow 0.3s ease;
+  font-size: 1.5rem;
+  text-align: right;
+  font-weight: bold;
+  color: var(--Very-dark-cyan);
+}
+
+.icon {
+  width: 12px;
+  height: 15px;
+  position: absolute;
+  top:45px;
+  left: 20px;
+}
+
+.tip-form input[type="text"]:is(:hover,:focus), 
+.tip-form input[type="number"]:is(:hover,:focus) {
+  box-shadow: 0 0 5px var(--Strong-cyan);
+}
+
+.tip-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  place-content: center;
+  color: aliceblue;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tip-option {
+  padding: 0.5rem;
+  position: relative;
+}
+
+.tip-option:not(:last-child) {
+  background: var(--Very-dark-cyan);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: all;
+  opacity: 0;
+}
+
+input[type="radio"]:checked ~ .tip-number {
+  color: red;
+}
+
+.tip-number {
+  pointer-events: none;
+}
+
+.custom {
+  padding: 0;
+}
+
+.custom-input {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  text-align: right;
+  border-radius: 5px;
+  background: var(--Very-light-grayish-cyan);
+  font-size: 1.5rem;
+}
+
+.tip-result {
+  margin-top: 2rem;
+  background-color: var(--Very-dark-cyan);
+  border-radius: 20px;
+  padding: 2rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+
+.wrapper h5 {
+  color: var(--White);
+}
+
+.wrapper p {
+  color: var(--Dark-grayish-cyan);
+  font-size: 0.7rem;
+}
+
+.wrapper h2 {
+  color: var(--Strong-cyan);
+}
+
+.reset-btn {
+  padding: 1rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: var(--Very-dark-cyan);
+  background-color: var(--Strong-cyan);
+  font-weight: bold;
+  margin-top: 1rem;
 }
