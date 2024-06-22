@@ -77,6 +77,29 @@ body {
   position: relative;
 }
 
+.people-number div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.people-number input.error {
+  box-shadow: 0 0 5px red !important;
+}
+
+.people-number input.error:focus {
+  border: none;
+}
+
+.error {
+  color: red;
+}
+
+.active {
+  transition: all 0.4s ease;
+  background-color: var(--Light-grayish-cyan) !important;
+  color: var(--Very-dark-cyan) !important;
+}
+
 .tip-form input[type="text"], .tip-form input[type="number"]:not(.custom-input){
   padding: 0.5rem;
   padding-inline: 1rem;
@@ -133,10 +156,6 @@ input[type="radio"] {
   pointer-events: all;
   opacity: 0;
   cursor: pointer;
-}
-
-input[type="radio"]:checked ~ .tip-number {
-  color: red;
 }
 
 .tip-number {
