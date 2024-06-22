@@ -44,8 +44,9 @@ body {
   max-width: 100%;
   display: grid;
   place-items: center;
-  margin: 4rem auto;
-  overflow-x: hidden;
+  margin-top: 4rem;
+  margin-inline: auto;
+  /* overflow-x: hidden; */
 }
 
 .title {
@@ -189,11 +190,17 @@ input[type="radio"]:checked ~ .tip-number {
 }
 
 .reset-btn {
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 5px;
   text-transform: uppercase;
   color: var(--Very-dark-cyan);
   background-color: var(--Strong-cyan);
-  font-weight: bold;
+  font-weight: bolder;
   margin-top: 1rem;
+  font-family: inherit;
+  transition: all 0.4s ease;
+}
+
+.reset-btn:hover {
+  background-color: var(--Light-grayish-cyan);
 }
