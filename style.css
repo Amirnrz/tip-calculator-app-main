@@ -30,6 +30,10 @@ input, button {
   outline: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 label {
   color: var(--Dark-grayish-cyan);
 }
@@ -118,7 +122,6 @@ body {
 .tip-option:not(:last-child) {
   background: var(--Very-dark-cyan);
   border-radius: 5px;
-  cursor: pointer;
 }
 
 input[type="radio"] {
@@ -129,6 +132,7 @@ input[type="radio"] {
   left: 0;
   pointer-events: all;
   opacity: 0;
+  cursor: pointer;
 }
 
 input[type="radio"]:checked ~ .tip-number {
@@ -202,4 +206,50 @@ input[type="radio"]:checked ~ .tip-number {
 
 .reset-btn:hover {
   background-color: var(--Light-grayish-cyan);
+}
+
+
+/* dekstop */
+
+@media screen and (min-width:800px) {
+  .tip-calculator {
+    flex-direction: row;
+    gap: 1rem;
+    border-radius: 20px;
+    margin-top: 4rem;
+    padding: 2rem;
+  }
+  .tip-form {
+    width: 50%;
+    flex: 1;
+  }
+  .tip-result {
+    flex: 1;
+    margin: 0;
+  }
+  .wrapper {
+    margin-bottom: 1rem;
+  }
+  .wrapper h5 {
+    font-size: 1.2rem;
+  }
+  .wrapper h2 {
+    font-size: 2rem;
+  }
+  .reset-btn {
+    margin-top: auto;
+  }
+  .tip-options {
+    grid-template-columns: repeat(3,1fr);
+  }
+  .container {
+    margin-top: 10rem;
+  }
+  .custom-input{
+    text-align: center;
+    font-size: 1rem;
+  }
+  .custom-input::placeholder {
+    font-size: 1rem;
+  }
 }
